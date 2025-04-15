@@ -1,0 +1,170 @@
+/* Favorites section*/
+.favorites-header {
+    font-size: 10mm;
+    display: flex;
+    margin: 0mm;
+    padding-top: 10mm;
+    padding-left: 15mm;
+    height: 10%;
+    color: black;
+}
+.star {
+    font-size: 7mm;
+    color: gold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Darker outline effect */
+}
+.ratings {
+    display: flex;
+    align-items: center;
+}
+.avgRating {
+    margin-left: 1mm;
+    font-size: 6mm;
+    color: black;
+}
+/* Favorites section*/
+
+/* Ingredient section*/
+/* Container for Ingredients and Search */
+.ingredients-container {
+    height: 80mm;
+    display: flex;
+    gap: 10mm;
+    padding: 8mm;
+}
+
+.ingredients-section {
+    flex: 2; /* Takes up 2/3 of the space */
+    max-height: 80mm; /* Set a fixed height for the ingredients section */
+    overflow-y: auto; /* Vertical scrolling */
+    color: black;
+    margin-top: 10mm;
+}
+
+.ingredients-section h2 {
+    position: absolute;
+    top: 30mm;
+    margin-bottom: 3mm;
+    font-size: 1.5em;
+    color: black;
+}
+
+.ingredients-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+}
+
+.ingredient-item {
+    margin: 0.5mm;
+    background-color: white;
+    padding: 3mm 5mm; /* Some padding to make space for the remove button */
+    display: flex;
+    justify-content: space-between; /* Space out the text and the remove button */
+    align-items: center;
+    font-size: 1em;
+    position: relative; /* For positioning the remove button */
+}
+.ingredient-search-item {
+    margin: 0.5mm;
+    background-color: white;
+    display: flex;
+    justify-content: space-between; /* Space out the text and the remove button */
+    align-items: center;
+    font-size: 1em;
+    padding: 2mm;
+}
+
+.remove-ingredient-button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 10mm; /* Space between text and button */
+}
+
+.remove-ingredient-button:hover {
+    color: dimgrey;
+}
+
+/* Styling for the Ingredient Search Section */
+.ingredient-search-section {
+    flex: 1; /* Takes up 1/3 of the space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 6mm;
+    background-color: #f1f1f1;
+    border-radius: 2.5mm;
+}
+
+.ingredient-search-section h2 {
+    margin-bottom: 5mm;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.ingredient-search-box {
+    padding: 3mm;
+    margin-bottom: 3mm;
+    border: 0.5mm solid #ccc;
+    border-radius: 1.5mm;
+    font-size: 1em;
+    width: 100%;
+}
+
+.search-results {
+    max-height: 40mm;
+    overflow-y: auto;
+    border-bottom-left-radius: 5mm;
+    border-bottom-right-radius: 5mm;
+}
+
+.add-ingredient-button {
+    background-color: #d3d3d3;
+    color: black;
+    border: none;
+    padding: 1mm 5mm;
+    border-radius: 10mm;
+    cursor: pointer;
+    font-size: 5mm;
+}
+
+.add-ingredient-button:hover {
+    background-color: #bfbfbf;
+    transition: background-color 0.2s;
+}
+/* Ingredient section*/
+
+.middle-nav {
+    background: linear-gradient(to right, lightgrey, black, lightgrey);
+    height: 24mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.middle-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.middle-button a {
+    font-size: 7.5mm;
+    max-height: 20mm;
+    width: 25%;
+    margin: 0mm;
+    padding: 5mm;
+    text-decoration: none;
+    background-color: #d3d3d3;
+    color: black;
+    border-radius: 5mm;
+    transition: background-color 0.2s;
+}
+.middle-button a:hover {
+    background-color: #bfbfbf;
+    transition: background-color 0.2s;
+}

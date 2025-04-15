@@ -1,0 +1,220 @@
+.search-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    padding: 5mm 0;
+    position: relative;
+}
+
+.filter-dropdown {
+    padding: 1mm; 
+    background-color: white; 
+    border: 1mm solid #d3d3d3; 
+    border-radius: 10mm; 
+    margin-right: 5mm; 
+    font-size: 4mm; 
+    cursor: pointer; 
+    outline: none; 
+    color: black; 
+}
+
+.search-input {
+    background-color: black;
+    color: white;
+    border: none; 
+    padding: 5mm 10mm; 
+    border-radius: 20mm; 
+    font-size: 5mm; 
+    width: 160mm; 
+    outline: none; 
+    position: relative;
+}
+
+.search-btn {
+    border: none; 
+    padding: 5mm; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: transparent;    /* Better background */
+}
+
+.search-btn i {
+    font-size: 5mm; 
+}
+
+/* Now in aglobal.css */
+/* .grid-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5mm; 
+    padding: 5mm; 
+    margin: 0 auto; 
+    max-width: 350mm;
+}
+
+.grid-item {
+    color: black;
+    position: relative;
+    max-height: 95%;
+    overflow: hidden;
+    border-radius: 3mm; 
+}
+
+.grid-item img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover; 
+} */
+
+.category-btn {
+    padding: 5mm; 
+    margin: 1mm; 
+    background-color: white;
+    border: 1mm solid #d3d3d3; 
+    border-radius: 10mm; 
+    cursor: pointer; 
+}
+
+.category-btn:hover {
+    background-color: #bfbfbf; 
+}
+
+.category-btn.active {
+    background-color: #bfbfbf;
+}
+
+.category-btn-container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 1mm;
+}
+
+.ingredient-propositions {
+    position: absolute;
+    width: 39%;
+    padding: 1mm;
+    border: 1mm solid #d3d3d3;
+    background-color: white;
+    color: black;
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 50mm; 
+    display: none; /* Start as hidden */
+}
+.red {
+    background-color: red;
+}
+
+.center {
+    margin-left: 5%;
+}
+
+
+/* Removed feature for tutorial slides
+.slideshow-container {
+    position: relative;
+    max-width: 60%;
+    margin: auto;
+}
+
+.slide {
+    display: none; 
+    position: absolute;
+    width: 60vw;
+    height: 22vw;
+    transition: opacity 1s ease-in-out; 
+    opacity: 0;
+    overflow: hidden;
+    border: 1mm solid #d3d3d3;
+    border-radius: 10mm;
+}
+
+.active {
+    display: block;
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+*/
+
+.slighRoundedCorners {
+    border-radius: 5mm;
+}
+
+/* Ingredient search result styles */
+.ingredient-item {
+    padding: 1mm;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 5px;
+    margin: 1mm 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on the entire ingredient item */
+.ingredient-item:hover {
+    background-color: #bfbfbf;
+}
+
+
+.cocktail-name-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: black;
+    padding: 4mm;
+    text-align: left;
+    font-size: 4mm;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.star {
+    font-size: 7mm;
+    color: gold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Darker outline effect */
+}
+
+.ratings {
+    display: flex;
+    align-items: center;
+}
+
+.avgRating {
+    margin-left: 1mm;
+    font-size: 6mm;
+    color: black;
+}
+
+.blackButton {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1mm 2mm; 
+    border-radius: 5mm;
+    cursor: pointer;
+    font-size: 3mm; 
+    transition: background-color 0.2s;
+    margin-right: 6mm; 
+    align-self: flex-end;
+}
+.blackButton:hover {
+    background-color: #4e4e4e;
+    transition: background-color 0.2s;
+}
+.search-group {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+}

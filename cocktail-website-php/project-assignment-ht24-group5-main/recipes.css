@@ -1,0 +1,296 @@
+/*--------------------------- Squares with content ----------------------------------*/
+
+.squar {
+    height: 4.6vw;
+    position: relative;
+    right: 2vw;
+}
+.squar-title {
+    font-size: 1.7vw;
+    color: #ffffff; 
+    top: 2vw;
+    position: absolute;
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    left: 25%; 
+    transform: translateX(-50%); 
+    white-space: nowrap;
+}
+.squar1 {
+    width: 39.2vw; 
+    height: 33vw;
+    background-color: #000000; 
+    position: relative; 
+    left: 5vw;
+    top: 1.5vw;
+    text-align: center;
+}
+.heart-icon {
+    font-size: 1.8vw; 
+    color: #bbb;     
+    cursor: pointer; 
+    transition: color 0.3s ease; 
+}
+.heart-icon.active {
+    color: red;      
+}.heart-icon:hover {
+    color: red; 
+}
+/* ------------------------------------ */
+   .favorite-icon {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: absolute;
+       top: 30vw;
+       left: 33vw;
+   }
+   .squar2{
+       width: 34vw; 
+       height: 26vw;
+       background-color: #908e8e; 
+       position: absolute; 
+       left: 7.5vw;
+       top: 4.5vw;
+       overflow: hidden;
+   }.squar2 img{
+       width: 100%; 
+       height: 100%; 
+       object-fit: cover; 
+   }
+   .contl{
+    position: absolute;
+   }
+   /* ------------Description ----------------*/
+   .Description{
+       position: absolute;
+       float: left;
+   }
+   .Instructions{
+       position: absolute;
+       top: 2.5vw;
+       left: 63.5vw;
+       font-family: 'Playfair Display', serif;
+       font-size: 1.7vw;
+       color: #ffffff;
+       text-decoration: underline;
+       z-index: 2;
+   }
+   .lorem{
+       left: 1.5vw;
+       top: 4.7vw;
+       position: absolute;
+       max-width:34vw;
+       font-size: 1vw;
+       line-height: 2;
+       color: #ffffff;
+       word-break: break-word;
+   }
+   .Lorem-shadow{
+       left: 61.8vw;
+       top: 1.5vw;
+       position: absolute;
+       width: 36.5vw;
+       height: 33vw;
+       background-color: #000000;
+       border-radius: 10mm;
+       overflow: hidden;
+       display: flex;
+       justify-content: center;    
+       align-items: center;        
+   }
+   /* -----------Rating background----------------*/
+   .rating-img{
+       width: 10vw; 
+       height: 1.8vw;
+       position: absolute; 
+       left: 20vw;
+       top: 31.5vw;
+       display: flex; 
+       justify-content: center; 
+       align-items: center; 
+       padding: 0.2vw;
+       border-radius: 10mm;
+   }
+   /*--------------------------- Rating Star (implementation1)  ----------------------------------*/
+   .rating{
+       position: absolute; 
+       top: 0vw;
+       left: 0vw;
+       display: flex; 
+       justify-content: space-around; 
+       width: 100%; 
+   }
+   .star{
+       font-size: 1.5vw;
+       color:#bbb;
+       transition: color 0.5s;
+       cursor: pointer;     
+   }
+   /* Class when a star is painted */
+    .star.hovered {
+        color: gold;
+    }
+
+    .star.checked {
+        color: gold;
+    }
+   /* -----------Recipe-colum-----------------*/
+   .recipe-colum{
+       width: 15vw; 
+       height: 33vw;
+       background-color: #000000; 
+       color: white;
+       position: absolute; 
+       left: 45.5vw;
+       top: 1.5vw;
+       border-radius: 10mm;
+   }.shadow{
+       width: 14vw; 
+       height: 32vw;
+       background-color: #747070; 
+       color: white;
+       position: absolute; 
+       left: 0.5vw;
+       top: 0.5vw;
+   }
+   .columtitle{
+       font-size: 1.5vw;
+       width: 30px;
+       text-align: center;
+       color: #ffffff; 
+       top: 1vw;
+       left: 3vw;
+       position: absolute;
+       z-index: 3;
+       font-family: 'Playfair Display', serif;
+       text-decoration: underline;
+   }.ingredients-list{
+       position: absolute; 
+       left: 1.7vw;
+       top: 5vw;
+       font-size: 1vw;
+       word-break: break-word;
+   }
+   /* ------------ComentsBox----------------*/
+   
+   .coments{
+       position: relative; 
+       right: 53vw;
+       top: 37vw;
+       word-wrap: break-word; 
+       font-size: 1.5vw;
+       padding-bottom: 30px;
+   }
+   /* ------------ComentsBox----------------*/
+   .comment {
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 7mm;
+    color: #000;
+    font-size: 2vw;
+    word-wrap: break-word;
+    position: relative;
+    padding-bottom: 30px;
+    }.highlight {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        background-color: #f0f0f0; 
+    }
+   .comment span {
+       position: absolute;
+       bottom: 5px;  
+       right: 10px;  
+       font-size: 1vw; 
+       color: #d6cece;   
+   }
+   .coments-box{
+       font-size: 20px; 
+       width: 93vw; 
+       height: 33vw; 
+       background-color: #000000; 
+       position: relative; 
+       color: white; 
+       z-index: 2; 
+       left: 56vw;
+       top: -3vw;
+       border-radius: 10mm;
+   }.coments-box2{
+       font-size: 20px; 
+       width: 85vw; 
+       height: 25vw; 
+       background-color: #bbb; 
+       position: absolute; 
+       color: white; 
+       z-index: 3; 
+       left: 60vw;
+       top: 0.7vw;
+       float: left;
+       padding: 10px;  
+       overflow-y: auto;  
+       box-sizing: border-box;
+       border-radius: 10mm;
+   }
+   .comentarios{
+       position: relative;
+       font-family: 'Playfair Display', serif;
+       position: absolute;
+       top: -2vw;
+       left: 60vw;
+       color: #ffffff; 
+       font-size: 1.5vw;
+       z-index: 3;
+   }
+   /* Textarea of the comments */
+   textarea {
+       width: 100%;  
+       max-width: 99%;  
+       height: 50px;
+       margin: 5px 0;  
+       padding: 10px;
+       border: 1px solid #ccc;
+       font-size: 0.5vw; 
+       resize: none;  
+       box-sizing: border-box; 
+   }
+   /* class used to disable */
+   .comment.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    }
+
+   /* Butoms */
+   .butoms{
+       position: absolute;
+       top: 0vw;
+       left: 19vw;
+   }.add{
+       position: absolute; 
+       left: 72vw;
+       top: 26.5vw;
+   }.edit{
+       position: absolute; 
+       left: 81vw;
+       top: 26.5vw;
+   }.delete{
+       position: absolute; 
+       left: 90vw;
+       top: 26.5vw;
+   }.add, .edit, .delete {
+       width: 7vw; 
+       height: 3vw;
+       background-color: #d3d3d3; 
+       color: black;
+       border-radius: 5mm;
+       border: none; 
+       cursor: pointer;
+       text-align: center;
+       line-height: 3vw;
+       font-size: 1.5vw; 
+       z-index: 3;
+   }
+   .add:hover, .edit:hover, .delete:hover {
+       background-color: #135e64; 
+   }
+
+

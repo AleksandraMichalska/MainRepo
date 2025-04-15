@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.g_background {
+    background-color: lightgrey;
+}
+
+.g_cocktail-name-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15mm;
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: black;
+    padding: 4mm;
+    text-align: left;
+    font-size: 5mm;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.g_grid-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5mm; 
+    padding: 5mm; 
+    margin: 0 auto; 
+    max-width: 350mm;
+}
+
+.g_grid-item {
+    aspect-ratio: 1/1;
+    color: black;
+    position: relative;
+    max-height: 95%;
+    overflow: hidden;
+    border-radius: 3mm;
+    box-shadow: 0 1mm 2mm 1mm rgba(0, 0, 0, 0.2); /* Shadow to pop from the background */
+}
+
+.g_grid-item img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+.g_shadow {
+    box-shadow: 0 1mm 2mm 1mm rgba(0, 0, 0, 0.2); /* Shadow to pop from the background */
+}
+
+.g_greyButton {
+    background-color: #d3d3d3;
+    color: black;
+    border: none;
+    padding: 3mm 6mm; /* Adjust padding for button size */
+    border-radius: 5mm;
+    cursor: pointer;
+    font-size: 5mm; /* Adjust font-size */
+    transition: background-color 0.2s;
+}
+.g_greyButton:hover {
+    background-color: #bfbfbf;
+    transition: background-color 0.2s;
+}
+
+.g_blackButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10vh; /* Adjust to move links up or down */
+    text-align: center;
+}
+.g_blackButton a{
+    font-size: 7.5mm;
+    width: 25%;
+    margin: 5mm;
+    padding: 5mm;
+    text-decoration: none;
+    background-color: black;
+    color: White;
+    border-radius: 5mm;
+    transition: background-color 0.2s;
+}
+.g_blackButton a:hover {
+    background-color: dimgray; /* Darker button color on hover */
+}
+
+.g_dropdown {
+    padding: 1mm;
+    background-color: white;
+    border: 1mm solid #d3d3d3;
+    border-radius: 10mm;
+    margin-right: 5mm;
+    font-size: 4mm;
+    cursor: pointer;
+    outline: none;
+    color: black;
+}
+
+
+.g_searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5mm 0;
+}
+.g_searchInput {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5mm 10mm;
+    border-radius: 20mm;
+    font-size: 5mm;
+    width: 160mm;
+    outline: none;
+}
+
+.g_addRoundedCorners{
+    border-radius: 10mm;
+}
+
+.g_textInput {
+    padding: 5mm;
+    font-size: 5mm;
+    border: 1mm solid #d3d3d3;
+    border-radius: 5mm;
+    outline: none;
+    background-color: #f9f9f9;
+}

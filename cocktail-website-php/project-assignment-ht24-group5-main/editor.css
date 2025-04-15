@@ -1,0 +1,195 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-height: 20mm;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.page-title {
+    position: relative;
+}
+
+.recipe-window {
+    display: flex;
+    margin-left: 2cm;
+    margin-right: 2cm;
+    margin-top: 0.5cm;
+    color: white;
+    border-radius: 5mm;
+    padding: 1cm;
+}
+.image-section {
+    width: 33%;
+    height: 100%;
+}
+.fileInput {
+    background-color: #d3d3d3;
+    color: black;
+    margin: 3mm;
+    padding: 2mm;
+    border-radius: 5mm;
+}
+
+.imagePreview {
+    background-color: #d3d3d3;
+    color: black;
+    width:100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 5mm;
+    text-align: center;
+}
+
+.image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.information-section {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 1%;
+}
+.information-header {
+    height: 15%;
+    margin-bottom: 3mm;
+    display: flex;
+    justify-content: space-between;
+}
+.category-list {
+    font-size: larger;
+    margin-bottom: 4mm;
+}
+.ingredients-section {
+    min-height: 62mm;
+    max-height: 62mm;
+    color:black;
+    margin-bottom: 4mm;
+    padding: 3mm;
+    font-size: 5mm;
+    border: 1mm solid #d3d3d3;
+    border-radius: 5mm;
+    outline: none;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.ingredients-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingredients-list {
+    position:relative;
+    height: 80%;
+    width: 100%;
+    color:black;
+}
+.ingredients-list li {
+    margin-left: 8mm;
+    margin-top: 4mm;
+    margin-bottom: 4mm;
+}
+.instructions-field {
+    padding: 5mm;
+    font-size: 5mm;
+    border: 1mm solid #d3d3d3;
+    border-radius: 5mm;
+    outline: none;
+    background-color: #f9f9f9;
+    position:relative;
+    min-height: 7cm;
+    width: 100%;
+    color:black;
+    resize: none;
+    font-family: Arial, sans-serif;
+}
+.search-ingredients {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 3mm 10mm;
+    border-radius: 20mm;
+    font-size: 4mm;
+    width: 100mm;
+    outline: none;
+    margin-right: 2cm;
+}
+.measurement-input {
+    padding: 3mm;
+    font-size: 4mm;
+    border: 1mm solid #d3d3d3;
+    border-radius: 5mm;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+.x-button{
+    background-color: #d3d3d3;
+    color: black;
+    border: none;
+    padding: 2mm 4mm; /* Adjust padding for button size */
+    border-radius: 5mm;
+    cursor: pointer;
+    font-size: 5mm; /* Adjust font-size */
+}
+
+.x-button:hover {
+    background-color: #bfbfbf;
+    transition: background-color 0.2s;
+}
+
+.search-section {
+    width: 100mm;
+    overflow: hidden;
+}
+
+.searchResultsContainer {
+    overflow-y: auto;
+    position: absolute;
+    border: 1mm solid #d3d3d3;
+    background-color: white;
+    padding: 1mm;
+    color: black;
+    width: 100%;
+    z-index: 100;
+    border-radius: 5mm;
+    width: 100mm;
+    max-height: 100mm;
+    overflow-y: auto;
+    display: none;
+}
+.searchResultsContainer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+.searchResultsContainer li {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    cursor: pointer;
+    color: black;
+}
+.searchResultsContainer li:hover {
+    background-color: #bfbfbf;
+}
+.searchResultsContainer button {
+    color:black;
+    width: 100%;
+    text-align: left;
+}
+
+.ingredient-label {
+    margin-left: 3mm;
+    margin-right: 3mm;
+}
+
+.errorMessage {
+    color: red;
+    margin-left: 2cm;
+    margin-right: 2cm;
+}

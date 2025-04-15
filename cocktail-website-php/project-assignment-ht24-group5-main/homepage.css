@@ -1,0 +1,111 @@
+/* Container holding the entire carousel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* The actual carousel where the images are aligned in a row */
+.carousel {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    padding: 5mm;
+    margin: 0 auto;
+    margin-left: 15mm;
+    margin-right: 15mm;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.header {
+    font-size: 10mm;
+    display: flex;
+    margin: 0mm;
+    padding-top: 10mm;
+    padding-left: 15mm;
+    height: 10%;
+    color: black;
+}
+
+.center-header {
+    padding-left: 0mm;
+    justify-content: center;
+}
+.center-grid {
+    display: flex;
+    justify-content: center;
+}
+.bottom-header {
+    margin-bottom: 10mm;
+}
+
+/* Individual items (each image + overlay) */
+.grid-item {
+    min-width: 20vw; /* Adjust size to fit 3 images on screen */
+    margin: 5mm;
+    color: black;
+    position: relative;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 3mm;
+    box-shadow: 0 1mm 2mm 1mm rgba(0, 0, 0, 0.2); /* Shadow to pop from the background */
+}
+
+.grid-item img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+.image-placeholder {
+    position: relative;
+    width: 100%;
+    height: 20vw;
+    background-color: black;
+    border-radius: 4mm;
+    overflow: hidden;
+  
+}
+
+.star {
+    font-size: 7mm;
+    color: gold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Darker outline effect */
+}
+
+.ratings {
+    display: flex;
+    align-items: center;
+}
+
+.avgRating {
+    margin-left: 1mm;
+    font-size: 6mm;
+    color: black;
+}
+
+/* Button styles for navigation */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 4mm;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1; /* S'assurer que les flèches soient au-dessus des images */
+}
+
+.prev {
+    left: 5mm;
+}
+
+.next {
+    right: 5mm;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,102 @@
+
+body {
+    background-color: #f4f4f4;
+}
+
+.login-signup-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 20mm;
+}
+
+.login-form, .signup-form {
+    background-color: white;
+    padding: 20mm;
+    border-radius: 10mm;
+    box-shadow: 0 0 10mm rgba(0, 0, 0, 0.1);
+    width: 100mm;
+}
+
+.login-form h2, .signup-form h2 {
+    text-align: center;
+    margin-bottom: 10mm;
+    font-size: 8mm;
+}
+
+.form-group {
+    margin-bottom: 10mm;
+}
+
+.form-group label {
+    font-size: 5mm;
+    display: block;
+    margin-bottom: 3mm;
+}
+
+.login-input {
+    width: 100%;
+    padding: 5mm;
+    font-size: 5mm;
+    border: 1mm solid #d3d3d3;
+    border-radius: 5mm;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+.login-btn, .signup-btn {
+    width: 100%;
+    padding: 5mm;
+    background-color: black;
+    color: white;
+    font-size: 6mm;
+    border: none;
+    border-radius: 5mm;
+    cursor: pointer;
+}
+
+.signup-btn {
+    background-color: #007bff;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: #bfbfbf;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 5mm;
+    font-size: 5mm;
+}
+
+#showSignup {
+    color: blue;
+    cursor: pointer;
+}
+
+/* Hide signup form initially */
+.hidden {
+    display: none;
+}
+
+.home-button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 3mm 5mm;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10mm;
+    cursor: pointer;
+    font-size: 5mm;
+    position: absolute;
+    top: 6%;
+    left: 10%;
+}
+
+.home-button i {
+    margin-right: 5px; /* Space between icon and text */
+}

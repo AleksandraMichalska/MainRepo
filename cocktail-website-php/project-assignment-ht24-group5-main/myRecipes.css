@@ -1,0 +1,60 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-height: 2cm;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.page-title {
+    position: relative;
+}
+.recipe-display {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.noRecipes {
+    width:100%;
+    min-height: 10cm;
+    font-size: 7mm;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.cocktailContainer {
+    margin: 5mm;
+}
+.cocktailImageContainer {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+}
+
+.cocktailImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.recipeButton {
+    background-color: #d3d3d3;
+    color: black;
+    border: solid gray 0.6mm;
+    padding: 3mm 6mm; /* Adjust padding for button size */
+    border-radius: 5mm;
+    cursor: pointer;
+    font-size: 5mm; /* Adjust font-size */
+}
+
+.square-img {
+    aspect-ratio: 1/1;
+}
+.drinkName {
+    width:40%;
+    overflow: hidden;
+}

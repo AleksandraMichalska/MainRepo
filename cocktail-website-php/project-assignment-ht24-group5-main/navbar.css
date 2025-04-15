@@ -1,0 +1,53 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 3mm 20mm; /* Increase the padding for a wider navbar ( second item ) */
+}
+
+.logo {
+    width: 18mm; 
+    height: 18mm; 
+    background-color: #d3d3d3;
+    color: black;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 0 15mm; /* Increase padding for more space between the links ( second item ) */
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 5mm;
+}
+.nav-links a:hover {
+    color: #bfbfbf;
+}
+
+.login-btn {
+    background-color: #d3d3d3;
+    color: black;
+    border: none;
+    padding: 3mm 6mm; /* Adjust padding for button size */
+    border-radius: 5mm;
+    cursor: pointer;
+    font-size: 5mm; /* Adjust font-size */
+}
+
+.login-btn:hover {
+    background-color: #bfbfbf;
+}
