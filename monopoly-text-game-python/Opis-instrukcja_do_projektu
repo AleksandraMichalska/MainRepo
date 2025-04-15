@@ -1,0 +1,82 @@
+Jest to tekstowa gra dla 2, 3 lub 4 graczy.
+
+Przygotowanie
+Na początku gra poprosi o podanie liczby graczy. Następnie gracze kolejno podadzą swoje dane. Kolejność wprowadzania graczy jest równa kolejce w rundzie.
+Dane to:
+-imię. Musi być unikatowe w grze i nie ma możliwości jego zmiany. Imię potwierdzamy wpisaniem słowa Yes.
+-pionek. W pudełku z grą są cztery różne pionki. Będą widoczne na wygenerowanej planszy. Wybór pionka przez gracza oznacza zmniejszenie liczby dostępnych pionków i ograniczenie wyboru następnych graczy.
+Gracz startuje z 3000$ i brakiem posiadłości.
+
+O każdą informację na tym etapie użytkownicy będą proszeni tak długo, aż wprowadzą poprawne dane. 
+
+Gdy skończy się deklaracja graczy, rozpoczyna się rozgrywka. 
+
+Kolejka gracza
+Gdy nastanie kolej danego gracza, pokaże się menu z dostępnymi czynnościami. Nazwę wybranej wpisuje się w pasku poniżej. Nawiasy z opisem nie są częścią tej nazwy. UWAGA: nie ma możliwości wyjścia z wybranej czynności. Pewne zabezpieczenie przed źle wybraną czynnością stanowi wymóg dokładnego wprowadzenia tekstu komendy.
+Czynności z listy można dowolnie wykonywać (o ile to technicznie możliwe np. wystarczająco gotówki) dopóki nie wykona się ruchu pionkiem, nie wyjdzie z gry lub nie zakończy jej dla wszystkich. Po wykonanym ruchu, lub opuszczeniu gry, następuje kolejka innego gracza.
+
+Opis dostępnych czynności
+
+-Show chart. Na ekranie wygeneruje się prostokątna plansza z 34 polami. Pola mają szerokość 19 liter i są oddzielone kreskami o szerokości 1 litery. Poziome krawędzie planszy mają 8 pól oraz 2 pola narożne, zaś pionowe krawędzie 7 pól oraz 2 pola narożne. Na każdym polu widnieje jego nazwa i ewentualnie stojące na nim pionki. Pola miast dodatkowo mają wyodrębnioną u góry przestrzeń na domy i hotele. Dom oznaczony jest małą literą h zaś hotel wielkim H.
+ 
+-Show my belongings. Wyświetli się stan posiadania gracza z podziałem na 3 kategorie: miasta, lotniska i elektrownie. Wszystkie posiadane pola z danej kategorii znajdą się kolejno pod nazwą kategorii. Każde miasto zaopatrzone jest również w liczbę domów i hoteli. Jeśli posiadłość jest zastawiona, otrzyma plakietkę MORTGAGED.
+
+-Show my money. Pokaże się informacja o posiadanej gotówce.
+
+-Show my pawn. Służy przypomnieniu o wybranym pionku.
+
+-Build house. Należy wybrać kraj w jakim domy/hotele zostaną zbudowane. Wówczas zostanie policzony koszt budowy. Jeden dom to 100$ pomnożone przez numer strefy pól w tym kraju. Domyślnie lewa krawędź planszy to strefa 1, górna 2, prawa 3, dolna 4. Ostateczny koszt, to opłata za dom pomnożona przez liczbę wszystkich miast w tym kraju. Jeśli gracza stać na budowę, opłata zostanie pobrana, a budynki postawione. Jeżeli w kraju są po 4 domy w każdym mieście, kupiona nieruchomość będzie hotelem. Nie można wtedy już więcej budować. 
+
+-Mortgage space. (Jeśli gracz nic nie ma, dostanie informację o braku posiadłości do zastawienia i wróci do menu.) Wyświetli się posiadanie gracza i wybraną z niego posiadłość do zastawienia trzeba wpisać do konsoli. Jeśli nazwa jest poprawna, pole zastawi się, a gracz otrzyma połowę jego ceny.
+
+-Unmortgage space. (Jeśli gracz nic nie ma, dostanie informację o braku posiadłości do odkupienia i wróci do menu.) Wyświetli się posiadanie gracza i wybraną przez niego posiadłość do odkupienia trzeba wpisać do konsoli. Gracz musi być gotowy zapłacić otrzymaną wcześniej połowę wartości pola. Jeśli warunki są spełnione, pole przestanie być zastawione, a opłata zostanie pobrana.
+
+-Sell space or house. (Jeśli gracz nic nie ma, dostanie informację o braku posiadłości do sprzedania i wróci do menu.) Wyświetli się posiadanie gracza. By sprzedać pole, do konsoli wpisuje jego nazwę, a jeśli gracz chce sprzedać po jednym budynku na każdym polu kraju - słowo 'building', a po zaakceptowaniu - żądany kraj.
+A) sprzedaż pola. Sprzedać można niezabudowane i niezastawione pole. Gracz dostanie jego całkowitą wartość.
+B) sprzedaż budynku. Jeśli w kraju są domy, sprzedany zostanie jeden dom w każdym mieście i gracz otrzyma połowę ceny każdego domu. Jeśli w kraju są hotele, sprzedany zostanie jeden hotel, CZYNIĄC KRAJ NIEZABUDOWANYM, i gracz otrzyma pięciokrotność połowy ceny domu w tym kraju (jeden hotel kosztował 4 domy plus koszt domu).
+
+-Trade. Gracze mogą sprzedawać sobie pola. Osoba, która wywołuje komendę, najpierw wpisuje imię gracza, z którym chce handlować. Następnie decyduje, czy chce kupić coś od swojego partnera w handlu (buy) czy coś mu sprzedać (sell). Jeśli sprzedawca nie ma nic na sprzedaż, czynność się zakończy. Jeśli ma, jego stan posiadania wyświetli się na ekranie. Wówczas trzeba wybrać pole, które zostanie sprzedane i wpisać jego nazwę. Transakcję potwierdzamy słowem Yes. Jeśli wszystkie warunki są spełnione (kupujący ma pieniądze, pole jest niezabudowane) pieniądze odejmą się kupującemu a dodadzą sprzedającemu, natomiast pole zostanie przeniesione do posiadłości kupującego. Właściwy komunikat poinformuje o rezultacie handlu.
+
+-Leave game. Gracz odejdzie z gry bez możliwości powrotu, a jego posiadłości wrócą do puli niezakupionych i niezabudowanych posiadłości. Odejście gracza oznacza jego przegraną. Jeżeli odejdą wszyscy gracze poza jednym, to on wygrywa i gra się kończy.
+
+-Quit game. Gra zostanie zakończona dla wszystkich, a zwycięzca wyłoniony na podstawie największej gotówki.
+
+-Make a move. Rzucone zostaną dwie kostki. Jeżeli ich numery są jednakowe (czyli wypadnie dublet), rzucone zostaną ponownie. Jeśli znów wypadnie dublet, gracz idzie do więzienia na 3 rundy i ta runda się kończy. W innym przypadku gracz poruszy się o tyle pól, ile wynosi suma oczek wszystkich rzuconych kostek. Jeżeli przekroczy start lub się na nim zatrzyma, otrzyma premię 400$. Po zatrzymaniu się na polu, nastąpi zdarzenie. Gdy gracz przejdzie w całości przez zdarzenie, jego kolej się kończy.
+
+Możliwe pola i ich zdarzenia:
+
+*Start
+Gracz dostanie 400$
+
+*Darmowy parking
+Zwykłe pole postoju
+
+*Więzienie
+Jeśli gracz staje na nim na skutek ruchu, jest to zwykłe pole postoju.
+
+*Pole "idź do więzienia"
+Gracz zostanie uwięziony na 3 rundy. Jego pionek automatycznie przeniesie się do pola Więzienie i z niego wyruszy po upłynięciu 3 rund.
+
+*Podatek 
+Należy wówczas zapłacić stałą sumę 200$ do banku. Jeśli gracza nie stać na opłatę będzie musiał sprzedać/zastawić to, co posiada (patrz: Wymuszanie płatności). Jeśli go stać, opłata zostanie pobrana automatycznie.
+
+*Strzeżony parking
+Należy wówczas zapłacić stałą sumę 400$ do banku. Jeśli gracza nie stać na opłatę będzie musiał sprzedać/zastawić to, co posiada (patrz: Wymuszanie płatności). Jeśli go stać, opłata zostanie pobrana automatycznie.
+
+*Niezakupione pole miasta, lotniska lub elektrowni
+Na ekranie wyświetli się nazwa tego pola, cena i pieniądze gracza. Jeżeli cena przekracza stan konta gracza, nie będzie mógł kupić pola. W przeciwnym razie decyduje, czy chce je kupić, wprowadzając słowo Yes lub No. Wydarzenie nie zakończy się, dopóki poprawna odpowiedź nie zostanie wpisana. W zależności od decyzji, pieniądze zostaną pobrane lub nie, a pole dodane do posiadania lub nie. 
+
+*Zakupione pole miasta, lotniska lub elektrowni
+Jeśli pole należy do tego, kto na nim stanie, lub pole jest zastawione, żadna płatność nie zostanie pobrana. W innym przypadku wymagana będzie zapłata. Jeśli płacący ma pieniądze, opłata zostanie pobrana automatycznie. Jeśli gracza nie stać na opłatę będzie musiał sprzedać/zastawić to, co posiada (patrz: Wymuszanie płatności).
+Każde miasto ma stałe stawki do zapłacenia zależnie od wybudowanych na nim budynków.
+Cena do zapłacenia za pobyt na lotnisku zależy od tego, ile lotnisk posiada właściciel. Jest to 50$ pomnożone przez 2 do potęgi równej liczbie lotnisk w posiadaniu właściciela.
+Opłata za zatrzymanie w elektrowni jest równa 10$ × wyrzucona na kostkach suma oczek × liczba elektrowni w posiadaniu właściciela.
+
+Wymuszanie płatności
+W przypadku braku wymaganej gotówki gracz zostanie poproszony o wybór, czy chce coś sprzedać (sell) czy zastawić (mortgage). Po wprowadzeniu odpowiedniej czynności pojawi się interfejs taki sam, jak przy komendach Mortgage space i Sell space or building. Sprzedaże i zastawy będą wymuszane tak długo, aż gracz uzyska żądaną kwotę. Wówczas pobierze się ona i nastąpi koniec kolejki. Może się zdarzyć, że gracz sprzeda lub zastawi wszystko, ale nie uzbiera kwoty, lub w ogóle nie ma nic do sprzedania/zastawienia. Wtedy przegra on i nie będzie mógł uczestniczyć w grze. Jego nadal posiadane pola (zastawione) wrócą do puli niezakupionych i niezabudowanych posiadłości. Właściciel pola nie otrzyma tym razem zapłaty.
+
+Czas w więzieniu
+Przez 3 rundy gracz nie może wykonywać żadnych akcji, ale dostaje pieniądze z pól. W swojej kolejce otrzyma informację, którą rundę spędza w więzieniu i jego kolejka się zakończy.
+
+Zakończenie gry
+Następuje automatycznie, gdy zostanie jeden gracz na skutek bankructwa lub wyjścia pozostałych. Można też zakończyć grę ręcznie komendą Quit game w menu głównym. W obu przypadkach podawany jest zwycięzca. Jeśli zostanie jeden gracz, to on jest zwycięzcą. Jeśli jest więcej graczy, wygra osoba z największą ilością gotówki. Jeśli i to nie wskaże zwycięzcy, informacja o nierozstrzygniętej grze pokaże się na ekranie.
